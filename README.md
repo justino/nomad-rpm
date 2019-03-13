@@ -7,11 +7,7 @@ Tries to follow the [packaging guidelines](https://fedoraproject.org/wiki/Packag
 * Shared state: `/var/lib/nomad/`
 * Sysconfig: `/etc/sysconfig/nomad`
 
-# Using
-
-Create the RPMs using one of the techniques outlined in the Build section below.
-
-### Version
+# Versioning
 
 The version number is hardcoded into the SPEC, however should you so choose, it can be set explicitly by passing an argument to `rpmbuild` directly:
 
@@ -19,9 +15,7 @@ The version number is hardcoded into the SPEC, however should you so choose, it 
 $ rpmbuild --define "_version 0.8.10"
 ```
 
-## Docker
-
-Building with Docker:
+# Build
 
 * Build the Docker image. Note that you must amend the `Dockerfile` header if you want a specific OS build (default is `centos7`).
     ```bash
