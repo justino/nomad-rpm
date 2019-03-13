@@ -85,8 +85,8 @@ rm -rf %{buildroot}
 
 %config(noreplace) %{_sysconfdir}/sysconfig/%{name}
 %attr(755, root, root) %{_bindir}/%{name}
-%attr(755, root, root) %{_sysconfdir}/%{name}.d/nomad.json.example
-%attr(755, root, root) %{_sysconfdir}/sysconfig/%{name}
+%attr(644, root, root) %{_sysconfdir}/%{name}.d/nomad.json.example
+%attr(644, root, root) %{_sysconfdir}/sysconfig/%{name}
 
 %if 0%{?fedora} >= 14 || 0%{?rhel} >= 7
 %{_unitdir}/%{name}.service
