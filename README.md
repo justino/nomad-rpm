@@ -19,12 +19,12 @@ $ rpmbuild --define "_version 0.8.10"
 
 * Build the Docker image. Note that you must amend the `Dockerfile` header if you want a specific OS build (default is `centos7`).
     ```bash
-    docker build -t nomad:build .
+    docker build --rm -t nomad:build .
     ```
 
 * Run the build.
     ```bash
-    docker run -v $PWD:/build nomad:build
+    docker run --rm -v $PWD:/build nomad:build
     ```
 
 * Retrieve the built RPM from `$PWD/rpmbuild/RPMS`.
